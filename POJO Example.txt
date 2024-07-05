@@ -1,10 +1,10 @@
-public class Person {
+public class Product {
     private String name;
-    private int age;
+    private double price;
 
-    public Person(String name, int age) {
+    public Product(String name, double price) {
         this.name = name;
-        this.age = age;
+        this.price = price;
     }
 
 
@@ -16,32 +16,33 @@ public class Person {
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
+    public double getPrice() {
+        return price;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setPrice(double price) {
+        this.price = price;
     }
 
- 
     @Override
     public String toString() {
-        return "Person{" +
+        return "Product{" +
                 "name='" + name + '\'' +
-                ", age=" + age +
+                ", price=" + price +
                 '}';
     }
 
+
     public static void main(String[] args) {
-        Person person = new Person("John", 30);
-        System.out.println(person);
+        Product product = new Product("Laptop", 1200.50);
+        System.out.println(product);
 
-        System.out.println("Name: " + person.getName());
-        System.out.println("Age: " + person.getAge());
 
-        // Modify attributes
-        person.setAge(31);
-        System.out.println("New Age: " + person.getAge());
+        System.out.println("Name: " + product.getName());
+        System.out.println("Price: " + product.getPrice());
+
+  
+        product.setPrice(1250.75);
+        System.out.println("New Price: " + product.getPrice());
     }
 }
